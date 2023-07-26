@@ -1,0 +1,185 @@
+{
+    "root": true,
+    "env": {
+        "node": true
+    },
+    "overrides": [
+        {
+            "files": "*.json",
+            "parser": "jsonc-eslint-parser",
+            "rules": {}
+        },
+        {
+            "files": [
+                "*.ts"
+            ],
+            "extends": [
+                "eslint:recommended",
+                "plugin:@angular-eslint/recommended",
+                "plugin:@angular-eslint/template/process-inline-templates",
+                "plugin:@typescript-eslint/recommended"
+            ],
+            "parser": "@typescript-eslint/parser",
+            "rules": {
+                "array-callback-return": "error",
+                "no-await-in-loop": "error",
+                "no-constant-binary-expression": "error",
+                "no-constructor-return": "error",
+                "no-duplicate-imports": "error",
+                "no-new-native-nonconstructor": "error",
+                "no-promise-executor-return": "error",
+                "no-self-compare": "error",
+                "no-template-curly-in-string": "error",
+                "no-unused-private-class-members": "error",
+                "require-atomic-updates": "error",
+                "arrow-body-style": [
+                    "error",
+                    "as-needed",
+                    {
+                        "requireReturnForObjectLiteral": true
+                    }
+                ],
+                "block-scoped-var": "error",
+                "camelcase": "error",
+                "capitalized-comments": "warn",
+                "consistent-return": "error",
+                "curly": [
+                    "error",
+                    "multi",
+                    "consistent"
+                ],
+                "default-case-last": "error",
+                "default-param-last": "error",
+                "eqeqeq": "error",
+                "guard-for-in": "error",
+                "logical-assignment-operators": "error",
+                "max-classes-per-file": [
+                    "error",
+                    1
+                ],
+                "max-depth": "error",
+                "max-lines": [
+                    "error",
+                    500
+                ],
+                "max-statements": "error",
+                "multiline-comment-style": "error",
+                "new-cap": "off",
+                "no-alert": "error",
+                "no-console": "error",
+                "no-delete-var": "off",
+                "no-empty-function": "error",
+                "no-empty-static-block": "error",
+                "no-eq-null": "error",
+                "no-var": "error",
+                "max-len": [
+                    "error",
+                    160
+                ],
+                "no-multi-spaces": "error",
+                "no-multiple-empty-lines": [
+                    "error",
+                    {
+                        "max": 1
+                    }
+                ],
+                "quotes": [
+                    "error",
+                    "single"
+                ],
+                "space-before-blocks": "error",
+                "object-curly-spacing": "error",
+                "@angular-eslint/component-class-suffix": [
+                    "error"
+                ],
+                "@angular-eslint/component-selector": [
+                    "error",
+                    {
+                        "type": "element",
+                        "prefix": "gis",
+                        "style": "kebab-case"
+                    }
+                ],
+                "@angular-eslint/contextual-decorator": [
+                    "error"
+                ],
+                "@angular-eslint/contextual-lifecycle": [
+                    "error"
+                ],
+                "@angular-eslint/no-empty-lifecycle-method": [
+                    "error"
+                ],
+                "@angular-eslint/use-component-selector": [
+                    "error"
+                ],
+                "@angular-eslint/use-lifecycle-interface": [
+                    "error"
+                ],
+                "@angular-eslint/use-pipe-transform-interface": [
+                    "error"
+                ],
+                "@typescript-eslint/member-ordering": [
+                    "error",
+                    {
+                        "default": [
+                            "signature",
+                            "field",
+                            "constructor",
+                            "method",
+                            "get",
+                            "set"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "files": [
+                "*.html"
+            ],
+            "extends": ["plugin:@angular-eslint/template/recommended"],
+            "parser": "@angular-eslint/template-parser",
+            "parserOptions": {
+                "project": "./tsconfig.app.json",
+                "ecmaVersion": 2022,
+                "sourceType": "module"
+            },
+            "rules": {
+                "@angular-eslint/template/attributes-order": [
+                    "error",
+                    {
+                        "order": [
+                            "STRUCTURAL_DIRECTIVE",
+                            "TEMPLATE_REFERENCE",
+                            "INPUT_BINDING",
+                            "TWO_WAY_BINDING",
+                            "OUTPUT_BINDING",
+                            "ATTRIBUTE_BINDING"
+                        ]
+                    }
+                ],
+                "@angular-eslint/template/banana-in-box": [
+                    "error"
+                ],
+                "@angular-eslint/template/conditional-complexity": [
+                    "error"
+                ],
+                "@angular-eslint/template/eqeqeq": [
+                    "error"
+                ],
+                "@angular-eslint/template/no-duplicate-attributes": [
+                    "error"
+                ],
+                "@angular-eslint/template/no-inline-styles": [
+                    "error",
+                    {
+                        "allowBindToStyle": true
+                    }
+                ],
+                "@angular-eslint/template/no-interpolation-in-attributes": [
+                    "error"
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,11 @@
+@import "node_modules/@gubkin/lib/assets/styles/theming";
+
+:host {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    .app {
+        @include fullSize();
+        padding: $padding;
+    }
+}
